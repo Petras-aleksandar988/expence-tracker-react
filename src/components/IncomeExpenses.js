@@ -11,20 +11,20 @@ export default function IncomeExpenses() {
       return (prev += curr);
     }, 0)
     .toFixed(2);
-  console.log(income);
 
-  const expense = ( amounts
-    .filter((expense) => expense < 0)
-    .reduce((prev, curr) => {
-      return ((prev += curr))
-    }, 0) * -1 ).toFixed(2) 
-console.log(expense);
+  const expense = (
+    amounts
+      .filter((expense) => expense < 0)
+      .reduce((prev, curr) => {
+        return (prev += curr);
+      }, 0) * -1
+  ).toFixed(2);
 
   return (
     <div className="inc-exp-container">
       <div>
         <h4>Income</h4>
-              <p className="money plus">{income }</p>
+        <p className="money plus">{income}</p>
       </div>
       <div>
         <h4>Expense</h4>
